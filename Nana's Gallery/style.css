@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+ body {
+    height: 100%; /* Ensure the body and html take full height of the viewport */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    font-family: "Oswald", sans-serif;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    min-height: 100vh;
+}
+
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.header-text {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    background-color: #121212;
+    background: linear-gradient( #121212, #12121200 )
+}
+
+.shotBy4k-img {
+    border-radius: 50%;
+    width: auto; /* Maintain aspect ratio */
+    max-width: 10vw; /* Ensure the image does not exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 10vh; /* Set a maximum height relative to viewport height */
+    /* Optionally set a specific width for small screens */
+    width: 5vw; /* Adjust width to fit within the container */
+}
+
+.header-nav ul {
+    display: flex;
+    padding: 0;
+}
+
+.header-nav li {
+    display: inline;
+    margin-left: 5em;
+    position: relative;
+    list-style: none;
+}
+
+.header-nav a {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.9vw;
+    font-weight: lighter;
+}
+
+.header-nav li::after, .footer-nav li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: white; /* The white underline color */
+    bottom: -2px; /* Positioning just below the text */
+    left: 0;
+    transition: width 0.4s ease-in-out; /* Smooth sliding effect */
+}
+
+.F-nav li:hover::after, .footer-nav li:hover::after {
+    width: 100%; /* Expands the underline across the text */
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.insta-logo {
+    width: 3vw;
+}
+
+.main-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Ensure it takes up space, but adjust if needed */
+    flex-grow: 1; /* This ensures it fills the remaining height between the header and footer */
+    width: 100%;
+}
+
+
+
+
+.carousel {
+    overflow: hidden; /* Hide anything outside the container */
+    position: relative;
+    width: 80vw; /* Ensure the container takes full width */
+    justify-content: space-between;
+    margin: 5vh
+}
+
+.carousel ul {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+}
+
+.slide {
+    flex: 0 0 33.33%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.slide img {
+    width: 100%; /* Make the image fill the entire slide width */
+    height: 35vw; /* Set a fixed height for the images */
+    object-fit:cover; /* Ensures the image covers the area without distortion */
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 170%;
+    top: 50%; /* Align the button vertically in relation to the image */
+    transform: translateY(-50%); /* Center the button perfectly */
+    color: rgba(0, 0, 0, 0.509);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.355);
+}
+
+.carousel-button.previous {
+    left: 0.5vw;
+}
+.carousel-button.next {
+    right: 0.5vw;
+}
+
+.footer-container {
+    background: linear-gradient( #12121200, #121212 );
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 20px 0;
+    margin: 0 auto;
+    border-top: #333 solid 1px;
+    box-sizing: border-box;
+    
+}
+
+
+.footer-header {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    
+}
+
+.footer-nav ul {
+    display: flex;
+    padding: 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin-left: 3em;
+    font-family: "Oswald", sans-serif;
+    position: relative;
+    list-style: none;
+}
+
+.footer-nav li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: rgb(0, 0, 0); /* The white underline color */
+    bottom: -2px; /* Positioning just below the text */
+    left: 0;
+    transition: width 0.4s ease-in-out; /* Smooth sliding effect */
+}
+
+.footer-nav a {
+    color: #121212;
+}
+
+
+
+
+
+.About {
+    max-width: 65%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 0.9em;
+    display: block;
+}
+
+/*for phone responsiveness*/
+
+@media (max-width: 768px) {
+    .header-nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .header-nav li {
+        margin-left: 0; /* Remove horizontal margin */
+        margin-bottom: 1em; /* Add vertical spacing between items */
+    }
+
+    .header-nav a {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack logo and nav vertically */
+    }
+
+    .shotBy4k-img {
+        margin-bottom: 1em; /* Add space below logo */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 95vw; /* Take up more space on small screens */
+    }
+
+    .slide {
+        flex: 0 0 100%; /* Display one image at a time */
+    }
+
+    .slide img {
+        height: auto; /* Adjust the height to fit the content */
+        max-height: 50vw; /* Limit image height */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack footer content */
+        align-items: center;
+        padding: 1em 0;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav li {
+        margin-left: 0;
+        margin-bottom: 1em; /* Add space between items */
+    }
+
+    .footer-nav a {
+        font-size: 3vw; /* Adjust font size */
+    }
+
+    .insta-logo {
+        width: 7vw; /* Resize Instagram logo for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em; /* Add padding on small screens */
+    }
+}
+
+.enq-header {
+    font-size: 4vw;
+}
+
+.enquiries-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20vh 0;
+}
+
+.enquiries-list li {
+    list-style: none;
+}
+
+.enquiries-list a {
+    font-size: 2em;
+    padding: 0.2em;
+    text-decoration: none;
+    color: #121212;
+}
+
+.enquiries-list a:hover {
+    text-decoration: underline;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    grid-gap: 15px; /* Space between images */
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); 
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Fade in effect */
+}
+
+.gallery-item .overlay .text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Show overlay on hover */
+.gallery-item:hover .overlay {
+    opacity: 1; /* Make the overlay visible */
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+.coll-001 img {
+    width: 20vw;
+    height: auto;
+}
